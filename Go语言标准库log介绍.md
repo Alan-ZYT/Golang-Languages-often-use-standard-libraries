@@ -1,6 +1,5 @@
 # Go语言标准库log介绍
 
-2017年6月19日
 
 无论是软件开发的调试阶段还是软件上线之后的运行阶段，日志一直都是非常重要的一个环节，我们也应该养成在程序中记录日志的好习惯。
 
@@ -101,7 +100,7 @@ func SetPrefix(prefix string)
 func main() {
 	log.SetFlags(log.Llongfile | log.Lmicroseconds | log.Ldate)
 	log.Println("这是一条很普通的日志。")
-	log.SetPrefix("[小王子]")
+	log.SetPrefix("[小荷花]")
 	log.Println("这是一条很普通的日志。")
 }
 ```
@@ -109,7 +108,7 @@ func main() {
 上面的代码输出如下：
 
 ```bash
-[小王子]2017/06/19 14:05:57.940542 .../log_demo/main.go:13: 这是一条很普通的日志。
+[小荷花]2017/06/19 14:05:57.940542 .../log_demo/main.go:13: 这是一条很普通的日志。
 ```
 
 这样我们就能够在代码中为我们的日志信息添加指定的前缀，方便之后对日志信息进行检索和处理。
@@ -134,7 +133,7 @@ func main() {
 	log.SetOutput(logFile)
 	log.SetFlags(log.Llongfile | log.Lmicroseconds | log.Ldate)
 	log.Println("这是一条很普通的日志。")
-	log.SetPrefix("[小王子]")
+	log.SetPrefix("[小荷花]")
 	log.Println("这是一条很普通的日志。")
 }
 ```
