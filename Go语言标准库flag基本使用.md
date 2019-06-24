@@ -1,6 +1,5 @@
 # Go语言标准库flag基本使用
 
-2017年6月19日
 
 Go语言内置的`flag`包实现了命令行参数的解析，`flag`包使得开发命令行工具更为简单。
 
@@ -167,8 +166,8 @@ Usage of ./flag_demo:
 正常使用命令行flag参数：
 
 ```bash
-$ ./flag_demo -name 沙河娜扎 --age 28 -married=false -d=1h30m
-沙河娜扎 28 false 1h30m0s
+$ ./flag_demo -name 北京帝都 --age 28 -married=false -d=1h30m
+北京帝都 28 false 1h30m0s
 []
 0
 4
