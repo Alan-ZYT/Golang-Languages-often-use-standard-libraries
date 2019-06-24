@@ -25,7 +25,7 @@ func Println(a ...interface{}) (n int, err error)
 ```go
 func main() {
 	fmt.Print("在终端打印该信息。")
-	name := "沙河小王子"
+	name := "alan"
 	fmt.Printf("我是：%s\n", name)
 	fmt.Println("在终端打印单独一行显示")
 }
@@ -34,7 +34,7 @@ func main() {
 执行上面的代码输出：
 
 ```go
-在终端打印该信息。我是：沙河小王子
+在终端打印该信息。我是：alan
 在终端打印单独一行显示
 ```
 
@@ -58,7 +58,7 @@ if err != nil {
 	fmt.Println("打开文件出错，err:", err)
 	return
 }
-name := "沙河小王子"
+name := "alan"
 // 向打开的文件句柄中写入内容
 fmt.Fprintf(fileObj, "往文件中写如信息：%s", name)
 ```
@@ -78,11 +78,11 @@ func Sprintln(a ...interface{}) string
 简单的示例代码如下：
 
 ```go
-s1 := fmt.Sprint("沙河小王子")
-name := "沙河小王子"
+s1 := fmt.Sprint("alan")
+name := "alan"
 age := 18
 s2 := fmt.Sprintf("name:%s,age:%d", name, age)
-s3 := fmt.Sprintln("沙河小王子")
+s3 := fmt.Sprintln("alan")
 fmt.Println(s1, s2, s3)
 ```
 
@@ -119,7 +119,7 @@ err := fmt.Errorf("这是一个错误")
 ```go
 fmt.Printf("%v\n", 100)
 fmt.Printf("%v\n", false)
-o := struct{ name string }{"小王子"}
+o := struct{ name string }{"alan"}
 fmt.Printf("%v\n", o)
 fmt.Printf("%#v\n", o)
 fmt.Printf("%T\n", o)
@@ -131,8 +131,8 @@ fmt.Printf("100%%\n")
 ```bash
 100
 false
-{小王子}
-struct { name string }{name:"小王子"}
+{alan}
+struct { name string }{name:"alan"}
 struct { name string }
 100%
 ```
@@ -226,7 +226,7 @@ fmt.Printf("%G\n", f)
 示例代码如下：
 
 ```go
-s := "小王子"
+s := "小荷花"
 fmt.Printf("%s\n", s)
 fmt.Printf("%q\n", s)
 fmt.Printf("%x\n", s)
@@ -236,8 +236,8 @@ fmt.Printf("%X\n", s)
 输出结果如下：
 
 ```bash
-小王子
-"小王子"
+小荷花
+"小荷花"
 e5b08fe78e8be5ad90
 E5B08FE78E8BE5AD90
 ```
@@ -309,7 +309,7 @@ fmt.Printf("%9.f\n", n)
 举个例子：
 
 ```go
-s := "小王子"
+s := "小荷花"
 fmt.Printf("%s\n", s)
 fmt.Printf("%5s\n", s)
 fmt.Printf("%-5s\n", s)
@@ -322,13 +322,13 @@ fmt.Printf("%05s\n", s)
 输出结果如下：
 
 ```bash
-小王子
-  小王子
-小王子  
-  小王子
-小王子  
-   小王
-00小王子
+小荷花
+  小荷花
+小荷花  
+  小荷花
+小荷花  
+   小荷
+00小荷花
 ```
 
 ## 获取输入
@@ -360,12 +360,12 @@ func main() {
 }
 ```
 
-将上面的代码编译后在终端执行，在终端依次输入`小王子`、`28`和`false`使用空格分隔。
+将上面的代码编译后在终端执行，在终端依次输入`小荷花`、`28`和`false`使用空格分隔。
 
 ```bash
 $ ./scan_demo 
-小王子 28 false
-扫描结果 name:小王子 age:28 married:false 
+小荷花 28 false
+扫描结果 name:小荷花 age:28 married:false 
 ```
 
 `fmt.Scan`从标准输入中扫描用户输入的数据，将以空白符分隔的数据分别存入指定的参数。
@@ -395,12 +395,12 @@ func main() {
 }
 ```
 
-将上面的代码编译后在终端执行，在终端按照指定的格式依次输入`小王子`、`28`和`false`。
+将上面的代码编译后在终端执行，在终端按照指定的格式依次输入`小荷花`、`28`和`false`。
 
 ```bash
 $ ./scan_demo 
-1:小王子 2:28 3:false
-扫描结果 name:小王子 age:28 married:false 
+1:小荷花 2:28 3:false
+扫描结果 name:小荷花 age:28 married:false 
 ```
 
 `fmt.Scanf`不同于`fmt.Scan`简单的以空格作为输入数据的分隔符，`fmt.Scanf`为输入数据指定了具体的输入内容格式，只有按照格式输入数据才会被扫描并存入对应变量。
@@ -409,7 +409,7 @@ $ ./scan_demo
 
 ```bash
 $ ./scan_demo 
-小王子 28 false
+小荷花 28 false
 扫描结果 name: age:0 married:false 
 ```
 
@@ -438,12 +438,12 @@ func main() {
 }
 ```
 
-将上面的代码编译后在终端执行，在终端依次输入`小王子`、`28`和`false`使用空格分隔。
+将上面的代码编译后在终端执行，在终端依次输入`小荷花`、`28`和`false`使用空格分隔。
 
 ```bash
 $ ./scan_demo 
-小王子 28 false
-扫描结果 name:小王子 age:28 married:false 
+小荷花 28 false
+扫描结果 name:小荷花 age:28 married:false 
 ```
 
 `fmt.Scanln`遇到回车就结束扫描了，这个比较常用。
