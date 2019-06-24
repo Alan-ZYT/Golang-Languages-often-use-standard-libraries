@@ -1,7 +1,5 @@
 # Go语言文件操作
 
-2017年6月21日
-
 本文主要介绍了Go语言中文件读写的相关操作。
 
 文件是什么？
@@ -201,9 +199,9 @@ func main() {
 		return
 	}
 	defer file.Close()
-	str := "hello 沙河"
+	str := "hello alan"
 	file.Write([]byte(str))       //写入字节切片数据
-	file.WriteString("hello 小王子") //直接写入字符串数据
+	file.WriteString("hello 小荷花") //直接写入字符串数据
 }
 ```
 
@@ -219,7 +217,7 @@ func main() {
 	defer file.Close()
 	writer := bufio.NewWriter(file)
 	for i := 0; i < 10; i++ {
-		writer.WriteString("hello沙河\n") //将数据先写入缓存
+		writer.WriteString("helloalan\n") //将数据先写入缓存
 	}
 	writer.Flush() //将缓存中的内容写入文件
 }
@@ -229,7 +227,7 @@ func main() {
 
 ```go
 func main() {
-	str := "hello 沙河"
+	str := "hello alan"
 	err := ioutil.WriteFile("./xx.txt", []byte(str), 0666)
 	if err != nil {
 		fmt.Println("write file failed, err:", err)
