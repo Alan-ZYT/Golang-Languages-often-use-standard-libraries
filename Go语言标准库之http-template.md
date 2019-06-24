@@ -1,6 +1,5 @@
 # Go语言标准库之http/template
 
-2017年6月21日
 
 `html/template`包实现了数据驱动的模板，用于生成可对抗代码注入的安全HTML输出。它提供了和`text/template`包相同的接口，Go语言中输出HTML的场景都应使用`text/template`包。
 
@@ -44,7 +43,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 利用给定数据渲染模板，并将结果写入w
-	tmpl.Execute(w, "沙河小王子")
+	tmpl.Execute(w, "hello golang")
 }
 func main() {
 	http.HandleFunc("/", sayHello)
@@ -82,7 +81,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	}
 	// 利用给定数据渲染模板，并将结果写入w
 	user := UserInfo{
-		Name:   "小王子",
+		Name:   "alan",
 		Gender: "男",
 		Age:    18,
 	}
@@ -255,7 +254,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	}
 
 	user := UserInfo{
-		Name:   "小王子",
+		Name:   "alan",
 		Gender: "男",
 		Age:    18,
 	}
@@ -331,7 +330,7 @@ func tmplDemo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	user := UserInfo{
-		Name:   "小王子",
+		Name:   "alan",
 		Gender: "男",
 		Age:    18,
 	}
